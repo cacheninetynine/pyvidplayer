@@ -3,12 +3,13 @@ import time
 import sys
 import os
 lst = [5,64,127,192,245]
+
 size = os.get_terminal_size()
 print(f'{size}\n')
 res = (round(size.columns/2), round(size.lines)-2)
-fastres = (round(size.columns/2), round(size.lines)-1)
 print(res)
 time.sleep(0.5)
+
 # # # #
 start = sys.argv[1]
 vidlen = int(sys.argv[2])
@@ -45,7 +46,7 @@ def convert(img):
     print(d)
 
 def slowrender():
-    for i in range(1,vidlen):
+    for i in range(1,vidlen+1):
         oldtime = time.time()
         if len(str(i)) == 1:
             fard = f'0000{i}'
@@ -63,7 +64,7 @@ def slowrender():
         time.sleep(fi)
         
 def slowcolorrender():
-    for i in range(1,vidlen):
+    for i in range(1,vidlen+1):
         oldtime = time.time()
         if len(str(i)) == 1:
             fard = f'0000{i}'
