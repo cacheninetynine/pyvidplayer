@@ -6,6 +6,7 @@ For usage you need:
 1. A video file converted to images
 2. Python3 interpreter
 3. A keyboard
+4. A monitor idk
 
 ## Command line arguments:
 1. start - The path to the folder and any symbols before the frame number
